@@ -21,5 +21,9 @@ inputs:
     default: ""
 
 runs:
-  using: python
-  main: main.py
+  using: "composite"
+  steps:
+    - run: pip install -r requirements.txt
+      shell: bash
+    - run: python main.py
+      shell: bash
