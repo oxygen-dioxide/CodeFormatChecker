@@ -1,0 +1,25 @@
+name: code-format-checker
+author: oxygen-dioxide
+description: "checking code formats and line endings "
+
+branding:
+  icon: file-text
+  color: gray-dark
+
+inputs:
+  glob:
+    description: "glob for the files to check"
+    required: true
+    default: "./*"
+  encoding:
+    description: "encoding of the file. Support all the encodings that python supports. Left blank to ignore encodings"
+    required: true
+    default: ""
+  line-ending:
+    description: "line ending of the file. Support lf, crlf. Left blank to ignore line endings"
+    required: true
+    default: ""
+
+runs:
+  using: python
+  main: main.py
