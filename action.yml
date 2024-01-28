@@ -23,7 +23,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: pip install -r requirements.txt
+    - run: pip install py_linq github-action-utils
       shell: bash
-    - run: python main.py
-      shell: bash
+    - run: main.py
+      shell: python
